@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/barcode"
+        android:textSize="16sp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20sp"
+        android:inputType="number"
+        android:hint="Type barcode here..."/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/productName"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20sp"
+        android:textSize="16sp"
+        android:hint="Type product name here..."/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Info"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:id="@+id/btnAdd"/>
+</LinearLayout>
