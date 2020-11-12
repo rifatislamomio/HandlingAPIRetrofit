@@ -1,15 +1,11 @@
 package com.example.handlingapiusingretrofit;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -19,7 +15,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
     TextView textView, searchBox;
     Button searchBtn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         searchBtn = findViewById(R.id.searchbtn);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://powerful-oasis-35253.herokuapp.com")
+                .baseUrl(APIURL.getUrl())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -37,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
             Call<List<Post>> call;
-
             @Override
             public void onClick(View v) {
                 if(searchBox.getText().length()==0)

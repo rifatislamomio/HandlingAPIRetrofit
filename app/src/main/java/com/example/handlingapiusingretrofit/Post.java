@@ -1,7 +1,5 @@
 package com.example.handlingapiusingretrofit;
 
-import android.content.Intent;
-
 public class Post {
     private String productname;
     private String barcode;
